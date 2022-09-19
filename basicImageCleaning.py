@@ -1,4 +1,6 @@
-
+# Input: a noisy image (JPG, PNG, tif)
+# Instructions:
+# Put this script and an image on the same project folder. Change the name on line 24 and run this file.
 # decide how much clean you want the picture.
 # Value n means that we take median among pixels of square of size n by n.
 def reduce_noise(a, n=7):
@@ -18,7 +20,7 @@ def reduce_noise(a, n=7):
 
 
 import PIL.Image, numpy as np
-
+# Change it
 a = np.array(PIL.Image.open('testphoto.tif'))
 a = reduce_noise(a)
 PIL.Image.fromarray(a).save('noised_out.tif')
